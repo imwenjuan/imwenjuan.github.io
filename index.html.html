@@ -1,0 +1,1985 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>知性女性</title>
+        <style type="text/css">
+            #outcontainer{
+                height: auto;
+                width: 100%;
+                margin: 0 auto;
+                padding:0;
+            } 
+            
+            #head{
+                margin: 0 auto;
+                padding:0;
+                height: 130px;
+                width: 100%;
+                background-color: #161616;
+            }
+            
+            #top{
+                height: 31px;
+                width: 960px;
+                margin: 0 auto;
+                font-size: 12px;
+            }
+            #topleft{
+                padding-left: 3px;
+                margin: 0 auto;
+                float: left;
+                width: 300px;
+                height: 31px;
+                color: #ccc;
+                line-height: 31px;
+            }
+            #red{color: #d8037a;}
+            #topright{
+                margin: 0 auto;
+                float: right;
+                width: 123px;
+                height: 31px;
+                line-height: 31px;
+                
+            }
+            #topright a{
+                text-decoration: none;
+                color: #959595;
+            }
+            #topright a:hover{text-decoration:underline;}
+
+            #headpic{
+                clear: both;
+                height: 99px;
+                width: 960px;
+                margin: 0 auto;
+                overflow: hidden;
+                background:transparent url(../img/logo.jpg)  scroll 20px -30px;
+            } 
+            #headpiccon{
+                float: right;
+                height: 73px;
+                width: 200px;
+                font-size: 13px;
+            }
+            #headpiccon li{
+                list-style: none;
+                line-height: 19px;
+            }
+            #headpiccon a{
+                text-decoration: none;
+                color: white;
+            }
+            #headpiccon a:hover{text-decoration: underline;}
+
+            #navcontainer{
+                height: 50px;
+                width: 100%;
+                background-color: #2b2e31;
+                margin-top: -16px;
+                text-align: center;
+            }
+            #nav{width: 1000px;margin: 0 auto;}
+            #nav ul li {
+                float: left;
+                display: inline;
+                list-style: none;
+                font-size: 12px;
+                font-family:'Courier New', Courier, monospace;
+                line-height: 50px;
+            }
+            #nav ul li a{
+                display: block;
+                width: 52px;
+                color: white;
+                text-decoration: none;
+            }
+            #nav ul li a:hover{color: wheat;}
+            
+            #main{
+                width: 100%;
+                background-color: #720e16;
+                height: 1843px;
+            }
+            #maincon1{
+                height: 812px;
+                margin: 0 auto;
+                padding: 0;
+                width: 960px;
+            }
+            #con1left{
+                float: left;
+                width: 291px;
+                height: 812px;
+                margin: 0 auto;
+                background-color: #e2e2e2;
+            }
+
+            .wrap {
+                border: 1px solid #7f7f7f;
+                width: 290px;
+                height: 463px;
+                position: relative;
+            }
+            #con1rollpic{
+                height: 406px;
+                width: 290px;
+            }
+            #con1rollpoint{
+                height: 14px;
+                width: 290px;
+            }
+            .con1piclist {
+                height: 406px;
+                width: 290px;
+                position: relative;
+                padding-left: 0px;
+            }
+            
+            .item {
+                width: 100%;
+                height: 100%;
+                list-style: none;
+                position: absolute;
+                left: 0;
+                opacity: 0;
+                transition: all 1s;
+            }
+    
+            .item:nth-child(1) {
+                background:url(../img/roll1.jpg);
+            }
+    
+            .item:nth-child(2) {
+                background:url(../img/roll2.jpg);
+            }
+    
+            .item:nth-child(3) {
+                background:url(../img/roll3.jpg);
+            }
+    
+            .item:nth-child(4) {
+                background:url(../img/roll4.jpg);
+            }
+    
+            .item:nth-child(5) {
+                background:url(../img/roll5\ \(2\).jpg);
+            }
+            .item:nth-child(6) {
+                background:url(../img/roll6.jpg);
+            }
+    
+            .item:nth-child(7) {
+                background:url(../img/roll7.jpg);
+            }
+            .item:nth-child(8) {
+                background:url(../img/roll8.jpg);
+            }
+            .item.active {
+                z-index: 10;
+                opacity: 1;
+            }
+    
+            .btn {
+                width: 60px;
+                height: 100px;
+                z-index: 100;
+                top: 150px;
+                position: absolute;
+                opacity: 0;
+            }
+    
+            #leftBtn {
+                left: 0px;
+            }
+    
+            #rightBtn {
+                right: 0px;
+            }
+
+            .pointList {
+                height: 12px;
+                width: 291px;
+                margin: 0 auto;
+                padding: 0px;
+                list-style: none;
+                position: absolute;
+                text-align: center;
+                font-size: 7px;
+                font-family:'Courier New', Courier, monospace;
+                font-weight: bolder;
+                z-index: 200;
+            }
+            .point {
+                list-style: none;
+                width: 35.35px;
+                height: 12px;
+                background-color: #7f7f7f;
+                float: left;
+                margin: 0 auto;
+                display: inline;
+                cursor: pointer;  
+                padding-right: 1px;
+                border-bottom: 1px solid #7f7f7f;
+                color:rgb(253, 253, 253);
+            }
+            
+            .point.active{
+                background-color: #75141b;
+            }
+            #con1rollpic ul{
+                margin: 0 auto;
+            }
+            #con1rollcon{
+                clear: both;
+                margin: 0 auto;
+                height: 45px;
+                width: 290px;
+                background-color: #55585a;
+                margin: -1px 0px 0px 0px;
+                position: relative;
+            }
+            .text{
+                position: absolute;
+                left:auto;
+                margin: 0 auto;
+                padding: 0;
+                list-style: none;
+                font-size: 16px;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                opacity: 0;
+            }
+            .text.active {
+                z-index: 10;
+                opacity: 1;
+            }
+            .textin{
+                padding-top: 2px;
+                height: 45px;
+                width: 291px;
+                text-align: center;
+                color: rgb(253, 253, 253);
+            }
+
+            .con1left-tab-box{
+                width: 291px;
+                height: 336px;
+                margin: 0 auto;
+                padding: 0;
+            }
+
+            .con1left-tab-head{
+                height: 24px;
+                width: 291px;
+            }
+            #con1left-tab-box-head-title{
+                float: left;
+                width: 56px;
+                height: 24px;
+                background-color: #e2e2e2;
+                text-align: center;
+                font: 13px sans-serif;
+                font-weight: bold;
+                line-height: 24px;
+            }
+            .con1left-tab-head-div{
+                width: 47px;
+                height: 24px;
+                background-color: #e2e2e2;
+                float: left;
+                line-height: 24px;
+                cursor: pointer;
+                color: #383838;
+                text-align: center;
+                font: 14px sans-serif;
+                line-height: 24px;
+            }
+            .con1left-tab-head .current{
+                background-color: #f5f5f5;
+                color: #000;
+            }
+            
+            .con1left-tab-body{
+                clear: both;
+                margin: 0 auto;
+                height: 323px;
+                width: 291px;
+                background-color: #f5f5f5;
+                font: 14px sans-serif;
+            }
+            .con1left-tab-body li{
+                list-style: none;
+                line-height: 25px;
+            }
+            .con1left-tab-body-div{
+                display: none;
+                padding: 10px 0px;
+                font: 1em sans-serif;
+            }
+            .con1left-tab-body .current{
+                display: block;
+            }
+
+            #con1center{
+                float: left;
+                width: 455px;
+                height: 812px;
+                margin: 0 auto;
+                background-color: white;
+            }
+            #con1centerhead{
+                width: 455px;
+                height: 40px;
+            }
+            #con1centerhead-time{
+                padding-left:28px;
+                padding-top: 15px;
+                float: left;
+                width: 200px;
+                height: 21px;
+                font: 13px sans-serif;
+            }
+            .con1centerhead-roll {
+                padding: 0;
+                margin: 0;
+                padding-top: 13px;
+                overflow: hidden;
+                float: right;
+                font-size: 12px;
+                line-height: 21px;
+                width: 205px;
+                height: 21px;
+            }
+
+            .rolltextleft {
+                padding: 0;
+                margin: 0;
+                float: left;
+            }
+
+            .rolltextleft {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                height: 21px;
+                overflow: hidden;
+                width: 148px;
+            }
+
+            .rolltextleft li {
+                padding: 0;
+                margin: 0;
+                width: 148px;
+                height: 21px;
+                line-height: 22px;
+            }
+            #con1center1{
+                width: 407px;
+                height: 90px;
+                margin: 24px;
+            }
+            #con1center1 h2{
+               text-align: center; 
+            }
+            #con1center2 h2{
+               text-align: center; 
+            }
+            #con1center1 h2 a{
+                text-decoration: none;
+                color: #b80412;
+            }
+            #con1center2 h2 a{
+                text-decoration: none;
+                color: #b80412;
+            }
+            #con1center1 p a{
+                text-decoration: none;
+                color: black;
+            }
+            #con1center2 p a{
+                text-decoration: none;
+                color: black;
+            }
+            #con1center1 p{
+                text-indent: 2pc;
+                font-size: 14px;
+            }
+            #con1center2 p{
+                text-indent: 2pc;
+                font-size: 14px;
+            }
+            #con1center2{
+                width: 407px;
+                height: 90px;
+                margin: 24px;
+            }
+            #con1center3{
+                width: 407px;
+                height: 170px;
+                margin-left:24px;
+            }
+            #con1center3left{
+                float: left;
+                width: 204px;
+                height: 170px;
+            }
+            #con1center3right{
+                float: right;
+                margin: 0 auto;
+                width: 203px;
+                height: 170px;
+            }
+            .con1center3text ul{
+                margin-top: 0%;
+                padding-left: 10px;
+                width: 204px;
+                height: 170px;
+            }
+            .con1center3text li{
+                padding-bottom: 6px;
+                color: black;
+                list-style: none;
+            }
+            .con1center3text a{
+                text-decoration: none;
+                color: black;
+                list-style: none;
+                font-size: 14px;
+            }
+            #con1center4{
+                width: 407px;
+                height: 45px;
+                margin-left: 24px;
+                border-style: solid;
+                border-width: 1px;
+                border-color: #e2e2e2;
+            }
+            #con1center4ban{
+                width: 407px;
+                height: 20px;
+            }
+            #con1center5{
+                width: 407px;
+                height: 20px;
+                margin-left: 24px;
+            }
+            #con1center5 hr{
+                width: 75%;
+                float:right;
+            }
+            #con1center6{
+                width: 407px;
+                height:45px;
+                margin-left: 35px;
+            }
+            #con1center7{
+                width: 407px;
+                height: 218px;
+                margin-left: 24px;
+            }
+            #con1center7left{
+                float: left;
+                width: 182px;
+                height: 208px;
+            }
+            #con1center7right{
+                margin:0 auto;
+                float: right;
+                width: 225px;
+                height: 208px;
+            }
+            #con1center7leftpic{
+                width: 182px;
+                height: 208px;
+            }
+            #con1center7righttext0 a{
+                color: #da840b;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            #con1center7righttext1{
+                margin: 10px;
+            }
+            #con1center7righttext1 a{
+                color: black;
+                text-decoration: none;
+                font-size: 12px;
+            }
+            #con1center7righttext2{
+                margin-top: 10px;
+                margin-left: 20px;
+            }
+            #con1center7righttext2 a{
+                color: black;
+                text-decoration: none;
+                font-size: 14px;
+            }
+            #con1right{
+                float: right;
+                width: 214px;
+                height: 812px;
+                margin: 0 auto;
+                background-color: #ededed;;
+            }
+
+            #con1righthead{
+                width: 214px;
+                height: 40px;
+            }
+            #con1righthead1{
+                width: 214px;
+                height: 18px;
+            }
+            #con1righthead2{
+                width: 214px;
+                height: 25px;
+            }
+            #con1righthead2 input{
+                width: 166px;
+                height: 25px;
+            }
+            #con1righthead2 button{
+                border:#ededed;
+            }
+
+            #con1rightcenter{
+                width: 214px;
+                height: 469px;
+            }
+            #con1rightcenter1{
+                width: 214px;
+                height: 31px;
+            }
+            #con1rightcenter1 a{
+                text-decoration: none;
+                color: black;
+            }
+            #con1rightcenter2 img{
+                width: 214px;
+                height: 80px;
+            }
+            #con1rightcenter3{
+                width: 214px;
+                height: 354px;
+            }
+            .con1right-tab-box{
+                width: 211px;
+                height: 317px;
+                margin: 0 auto;
+                padding: 0;
+            }
+
+            .con1right-tab-head{
+                height: 25px;
+                width: 211px;
+            }
+            .con1right-tab-head-div{
+                width: 70.3px;
+                height: 25px;
+                background-color: #e2e2e2;
+                float: left;
+                cursor: pointer;
+                color: #383838;
+                text-align: center;
+                font: 14px sans-serif;
+                line-height: 25px;
+            }
+            .con1right-tab-head .current{
+                background-color: #bebebe;
+                color: #000;
+                font-weight: bolder;
+            }
+            
+            .con1right-tab-body{
+                clear: both;
+                margin: 0 auto;
+                text-align: center;
+                height: 290px;
+                width: 211px;
+                font: 14px sans-serif;
+            }
+            .con1right-tab-body li{
+                list-style: none;
+            }
+            .con1right-tab-body-div{
+                height: 280px;
+                width: 145px;
+                display: none;
+                padding-top: 10px;
+                margin: 0 auto;
+                font: 1em sans-serif;
+            }
+            .con1right-tab-body .current{
+                display: block;
+            }
+
+            .con1right-tab-body-div img{
+                width: 142px;
+                height: 180px;
+                text-align: center;
+            }
+            .con1right-tab-body-div span{
+                text-align: center;
+                font: 14px sans-serif;
+            }
+            .con1right-tab-body-div p{
+                text-align: left;
+                font-size: 12px;
+                line-height: 12px;
+            }
+            
+            #transition{
+                clear: both;
+                width: 960px;
+                height: 99px;
+                margin: 0 auto;
+                background-color: white;
+            }
+            
+            #maincon2{
+                clear: both;
+                height: 601 px;
+                width: 960px;
+                margin: 0 auto;
+                background: white;
+            }
+            #con2head{
+                height: 36px;
+                width: 960px;
+                margin: 0 auto;
+                background-color: #2b2f32;
+            }
+            .conhead{float: left;width: 220px;height: 30px;padding-top: 2px;}
+            #con2head ul {
+                margin: 0 auto;
+                float: left;
+                height: 36px;
+            }
+            #con2head ul li{
+                float: left;
+                height: 36px;
+                list-style: none;
+                display: inline;
+                font-size: 13px;
+                font-family:'Courier New', Courier, monospace;
+            }
+            #con2head ul li a{
+                height: 36px;
+                display: block;
+                width: 90px;
+                padding-right: 9px;
+                color: whitesmoke;
+                text-decoration: none;
+                line-height: 40px;
+            }
+            #con2head ul li a:hover{color: wheat;}
+            #con2main{
+                height: 569px;
+                width: 960px;
+                
+            }
+            #con2mainleft{
+                margin:0 auto;
+                float:left;                
+                width: 291px;
+                height: 569px;
+            }
+            
+            .wrap2{
+                width: 291px;
+                height: 343px;
+                background-color: #e2e2e2;
+                position: relative;
+            }
+            
+            #con2rollpic{
+                width: 291px;
+                height: 303px;
+                position: relative;
+            }
+            #con2rollpoint{
+                float: right;
+                width: 72px;
+                height: 12px;
+                color:white;
+                position: absolute;
+                top: 291px;
+                left: 219px;
+            }
+            #con2rollcon{
+                clear: both;
+                margin: 0 auto;
+                width: 291px;
+                height: 46px;
+                background-color: #55585a;
+                color:white;
+                position: relative;
+            }
+
+            .con2piclist{
+                height: 303px;
+                width: 291px;
+                padding-left: 0px;
+                position: absolute;
+            }
+            
+            .pointList2{
+                height: 12px;
+                width: 72px;
+                margin: 0 auto;
+                padding: 0px;
+                list-style: none;
+                position:absolute;
+                text-align: center;
+                font-size: 7px;
+                font-family:'Courier New', Courier, monospace;
+                font-weight: bolder;
+                z-index: 200;
+                
+            }
+
+            .point2 {
+                list-style: none;
+                width: 35px;
+                height: 12px;
+                background-color: #7f7f7f;
+                float: left;
+                margin: 0 auto;
+                display: inline;
+                cursor: pointer;  
+                padding-right: 1px;
+                color:rgb(253, 253, 253);
+            }
+            .point2.active{
+                background-color: #75141b;
+            }
+            #con2rollpic ul{
+                margin: 0 auto;
+            }
+            
+            .item2 {
+                width: 100%;
+                height: 100%;
+                list-style: none;
+                position: absolute;
+                left: 0;
+                opacity: 0;
+                transition: all 1s;
+            }
+            .item2.active {
+                z-index: 10;
+                opacity: 1;
+            }
+            .item2:nth-child(1) {
+                background:url(../img/MODELP1.jpg);
+            }
+
+            .item2:nth-child(2) {
+                background:url(../img/MODELP2.jpg);
+            }
+            .btn2 {
+                width: 60px;
+                height: 100px;
+                z-index: 100;
+                top: 150px;
+                position: absolute;
+                opacity: 0;
+            }
+ 
+            #leftBtn2 {
+                left: 0px;
+            }
+    
+            #rightBtn2 {
+                right: 0px;
+            }
+
+            .text2{
+                position: absolute;
+                left:auto;
+                margin: 0 auto;
+                padding: 0;
+                list-style: none;
+                font-size: 16px;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                opacity: 0;
+            }
+            .text2.active {
+                z-index: 10;
+                opacity: 1;
+            }
+            .textin2{
+                height: 45px;
+                width: 291px;
+                line-height: 45px;
+                text-align: center;
+                color: rgb(253, 253, 253);
+            }
+            
+            #con2mainleftfooter{
+                width: 291px;
+                height: 220px;
+                background-color: #e2e2e2;
+                
+            }
+            #con2lfleft{
+                margin: 0 auto;
+                float: left;
+                width: 130px;
+                height: 220px;
+            }
+            #con2lfright{
+                margin: 0 auto;
+                float: right;
+                width: 161px;
+                height: 220px;
+            }
+           #con2mainleftfootertext{
+                padding: 11px;
+                font-weight: bold;
+           }
+            #con2mainleftfooterpic{
+                height: 153px;
+                width: 102px;
+                padding-left: 11px;
+            }
+            #con2mainleftfooterri{
+                width: 178px;
+                height:220px;
+                float:right;
+            }
+            #con2lfrighttext1 a{
+                color: black;
+                font-size: 12px;
+               text-decoration: none;
+            }
+            #con2lfrighttext2 a{
+                padding-left: 10px;
+                color: black;
+                font-size: 12px;
+                text-decoration: none;
+            }
+            #con2mainright{
+                margin:0 auto;
+                float: right;
+                width: 669px;
+                height: 569px;
+            }
+            #con2mainrighthead1{
+                width: 644px;
+                height:10px
+            }
+            #con2mainrighthead2{
+                float: right;
+                width: 644px;
+                height: 120px;
+                background-color: #f5f5f5;
+            }
+            #con2mainhead2left{
+                padding-left: 10px;
+                float: left;
+                width: 405px;
+                height: 120px;
+            }
+            #con2mainhead2right{
+                padding-right: 10px;
+                margin: 0 auto;
+                float: right;
+                width: 219px;
+                height: 106px;
+                
+            }
+            #con2mainhead2left p{
+                text-indent: 2pc;
+                font-size: 15px;
+                
+            }
+            #con2mainrighthead{
+                width: 669px;
+                height: 130px;
+            }
+            #con2mainrightcenter{
+                width: 669px;
+                height: 201px;
+            }
+            #con2maincenterleft{
+                margin-left: 25px;
+                float: left;
+                width: 327px;
+                height: 201px;
+            }
+            #con2maincenterleft1{
+                float: left;
+                width: 100px;
+                height: 201px;
+            }
+            #con2maincenterleft1pic{
+                width: 100px;
+                height: 153px;
+            }
+            #con2maincenterleft2{
+                margin:0 auto;
+                float: right;
+                width: 207px;
+                height: 201px;
+            }
+            #con2maincentertext1 a{
+                color: black;
+                text-decoration: none;
+                font-size: 16px;
+            }
+            #con2maincentertext2 a{
+                color: black;
+                text-decoration: none;
+                font-size: 14px;
+            }
+            #con2maincentertext3 a{
+                color: black;
+                text-decoration: none;
+                font-size: 15px;
+            }
+            #con2maincenterright{
+                margin:0 auto;
+                float: right;
+                width: 306px;
+                height: 201px;
+            }
+            #con2maincenterright1{
+                float: left;
+                width: 100px;
+                height: 201px;
+            }
+            #con2maincenterright2{
+                margin:0 auto;
+                float: right;
+                width: 186px;
+                height: 201px;
+            }
+            #con2mainrightfooter{
+                width: 669px;
+                height: 238px;
+            }
+            #con2mainrightfooterleft{
+                float: left;
+                width: 656px;
+                height: 238px;
+            }
+            #con2mainrightfooterhr{
+                height: 10px;
+                width: 656px;
+                background-color: #e2e2e2;
+            }
+            #con2mainrightfooterhead{
+                height: 28px;
+                width: 656px;
+            }
+            #con2mainrightfooterhead1{
+                float: left;
+                width: 80px;
+                height: 28px;
+                text-align: center;
+                font-weight: bold;
+            }
+            #con2mainrightfooterhead2{
+                margin:0 auto;
+                float: right;
+                width: 576px;
+                height: 28px;
+                font-size: 12px;
+                padding-top: 5px;
+            }
+            #con2mainrightfooterright{
+                float: right;
+                background-color: #e2e2e2;
+                width: 13px;
+                height: 238px;
+            }
+            #con2mainrightfooterfooter{
+                width: 600px;
+                height: 200px;
+            }
+            #con2mainrightfooterfooter ul{
+                padding: 0;
+                margin: 10px auto;
+                float: left;
+                width: 1320px;
+                height: 170px;
+            }
+            #con2mainrightfooterfooter ul li{
+                padding-right: 15px;
+                float: left;
+                width: 105px;
+                height: 160px;
+                display: inline;
+                list-style: none;
+            }
+            
+            
+            #maincon3{
+                height: 308 px;
+                width: 960px;
+                margin: 0 auto;
+                background: white;
+            }
+            #con3head{
+                height: 36px;
+                width: 960px;
+                margin: 0 auto;
+                background-color: #2b2f32;
+            }
+            #con3head ul {
+                margin: 0 auto;
+                float: left;
+                height: 36px;
+            }
+            #con3head ul li{
+                float: left;
+                height: 36px;
+                list-style: none;
+                display: inline;
+                font-size: 13px;
+                font-family:'Courier New', Courier, monospace;
+            }
+            #con3head ul li a{
+                height: 36px;
+                display: block;
+                width: 120px;
+                padding-right: 9px;
+                color: whitesmoke;
+                text-decoration: none;
+                line-height: 40px;
+            }
+            #con3head ul li a:hover{color: wheat;}
+
+            #con3main{
+                height: 274px;
+                width: 960px;
+                margin: 0 auto;
+            }
+            #con3main ul {
+                margin:0 auto;
+                height:274px;
+                width: 920px;
+                padding: 0;
+            }
+            #con3main ul li{
+                float: left;
+                height: 276px;
+                width: 169px;
+                list-style: none;
+                display: inline;
+                margin-right: 15px;
+                text-align: center;
+            }
+            .con3mainpic{
+                width: 169px;
+                height: 218px;
+                margin: 0 auto;
+                float: left;
+            }
+            .con3footertext{
+                float: left;
+                margin: 0 auto;
+                background-color: #54585b;
+                width: 169px;
+                height: 56px;
+                color:white;
+                font-size:14px;
+                font-weight: bold;
+            }
+            #con3maincon{
+                width: 908px;
+                height: 274px;
+                margin: 0 auto;
+            }
+            
+            #footer{
+                margin: 0 auto;
+                width: 100%;
+                height: 367px;
+                background-color: #161616;
+            }
+            #footer3{
+                height: 29px;
+                background-color:#161616 ;
+            }
+            #footer1{
+                margin: 0 auto;
+                width: 960px;
+                height: 190px;
+                background-color:#161616;
+                text-align: center;
+                font-size: 13px;
+            }
+            
+            #footer1 table{
+                text-align: center;
+
+            }
+            #footer1 table a{
+                text-decoration: none;
+                color:#6e6e6e;
+            }
+            #footer2{
+                padding-top: 20px;
+                height: 99px;
+                text-align: center;
+                margin: 0 auto;
+                font-size: 13px;
+                color: white;
+                }
+            #footer2 a{ color:white;text-decoration: none;}
+            #footer2 a:hover{color:wheat;}
+            #bt{
+                background-color: #242424;
+                font-size: 14px;
+                color: rgb(214, 207, 194);
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        <div id="outcontainer">
+            <div id="head">
+                <div id="top">
+                    <div id="topleft">
+                        <span>2011瑞丽造型大赏</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span>手机看瑞丽</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span id="red">瑞丽电子杂志</span>
+                    </div>
+                    <div id="topright">
+                        <span><a href="#">设为首页</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span><a href="#">网站地图</a></span>
+                    </div>
+                </div>
+                <div id="headpic">
+                    <div id="headpiccon">
+                        <ul>
+                            <li><a href="#">艾诗缇超值体验优惠中</a></li>
+                            <li><a href="#">雅诗兰黛全新密集焕白</a></li>
+                            <li><a href="#">渴水秀发润泽凝珠</a></li>
+                            <li><a href="#">玩游戏赢欧珀莱正品</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="navcontainer">
+                <div id="nav">
+                    <ul>
+                        <li><a href="#">服饰</a></li>
+                        <li><a href="#">美容</a></li>
+                        <li><a href="#">家居</a></li>
+                        <li><a href="#">奢华</a></li>
+                        <li><a href="#">生活</a></li>
+                        <li><a href="#">新娘</a></li>
+                        <li><a href="#">星座</a></li>
+                        <li><a href="#">模特</a></li>
+                        <li><a href="#">盛典</a></li>
+                        <li><a href="#">情感</a></li>
+                        <li><a href="#">图片</a></li>
+                        <li><a href="#">视频</a></li>
+                        <li><a href="#">专题</a></li>
+                        <li><a href="#">论坛</a></li>
+                        <li><a href="#">博客</a></li>
+                        <li><a href="#">测试</a></li>
+                        <li><a href="#">化妆品库</a></li>
+                        <li><a href="#">微博</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="main">
+                <div id="maincon1">
+                    <div id="con1left">
+                        <div class="wrap">
+                            <div id="con1rollpic">
+                                <ul class="con1piclist">
+                                    <li class="item active"></li>
+                                    <li class="item"></li>
+                                    <li class="item"></li>
+                                    <li class="item"></li>
+                                    <li class="item"></li>
+                                    <li class="item"></li>
+                                    <li class="item"></li>
+                                    <li class="item"></li>
+                                </ul>
+                            </div>
+                            <div id="con1rollpoint">
+                                <ul class="pointList">
+                                    <li class="point active" data-index = 0>1</li>
+                                    <li class="point" data-index = 1>2</li>
+                                    <li class="point" data-index = 2>3</li>
+                                    <li class="point" data-index = 3>4</li>
+                                    <li class="point" data-index = 4>5</li>
+                                    <li class="point" data-index = 5>6</li>
+                                    <li class="point" data-index = 6>7</li>
+                                    <li class="point" data-index = 7>8</li>
+                                </ul>
+                            </div>
+                            <div id="con1rollcon">
+                                <li class="text active" data-index = 0><div class="textin">妮可&nbsp基德曼<br>完美演绎</div></li>
+                                <li class="text" data-index = 1><div class="textin">局部花案点睛<br>让卫浴空间更有趣味</div></li>
+                                <li class="text" data-index = 2><div class="textin">调出花香气息<br>舒展身体放松精神</div></li>
+                                <li class="text" data-index = 3><div class="textin">雅诗兰黛<br>全新密集焕白</div></li>
+                                <li class="text" data-index = 4><div class="textin">美容大王的选择<br>发尾分叉复合精华乳</div></li>
+                                <li class="text" data-index = 5><div class="textin">参与美白女王评选<br>拥有殿堂级透白美肌正品</div></li>
+                                <li class="text" data-index = 6><div class="textin">威廉王子婚礼<br>大猜想</div></li>
+                                <li class="text" data-index = 7><div class="textin">春秋季节<br>跟模特学穿马卡龙色系</div></li>
+                            </div>
+                            <button class="btn" id="leftBtn"> < </button> 
+                            <button class="btn" id="rightBtn"> > </button>
+                            <script>
+                                var texts = document.querySelectorAll(".text");//文字
+                                var items = document.querySelectorAll(".item");//图片
+                                var points = document.querySelectorAll(".point")//点
+                                var left = document.getElementById("leftBtn");
+                                var right = document.getElementById("rightBtn");
+                                var all = document.querySelector(".wrap")
+                                var index = 0;
+                                var time = 0;//定时器跳转参数初始化
+                                
+                         
+                                //清除active方法
+                                var clearActive = function () {
+                                    for (i = 0; i < items.length; i++) {
+                                        items[i].className = 'item';
+                                    }
+                                    for (j = 0; j < points.length; j++) {
+                                        points[j].className = 'point';
+                                    }
+                                    for (j = 0; j < points.length; j++) {
+                                        texts[j].className = 'text';
+                                    }
+                                }
+                         
+                                //改变active方法
+                                var goIndex = function () {
+                                    clearActive();
+                                    items[index].className = 'item active';
+                                    points[index].className = 'point active';
+                                    texts[index].className = 'text active';
+                                }
+                            
+                                //左按钮事件
+                                var goLeft = function () {
+                                    if (index == 0) {
+                                        index = 7;
+                                    } else {
+                                        index--;
+                                    }
+                                    goIndex();
+                                }
+                         
+                                //右按钮事件
+                                var goRight = function () {
+                                    if (index < 7) {
+                                        index++;
+                                    } else {
+                                        index = 0;
+                                    }
+                                    goIndex();
+                                }
+                        
+                                for(i = 0;i < points.length;i++){
+                                    points[i].addEventListener('click',function(){
+                                        var pointIndex = this.getAttribute('data-index')
+                                        index = pointIndex;
+                                        goIndex();
+                                        time = 0;//计时器跳转清零
+                                    })
+                                }
+                                //计时器
+                                var timer;
+                                function play(){
+                                 timer = setInterval(() => {
+                                    time ++;
+                                    if(time == 20 ){
+                                        goRight();
+                                        time = 0;
+                                    }    
+                                },100)
+                            }
+                                play();
+                                //移入清除计时器
+                                all.onmousemove = function(){
+                                    clearInterval(timer)
+                                }
+                               //移出启动计时器
+                                all.onmouseleave = function(){
+                                    play();
+                                }
+                            </script>
+                        </div>
+                        
+                        <div class="con1left-tab-box">
+                            <div class="con1left-tab-head">
+                                <div id="con1left-tab-box-head-title">排行TOP</div>
+                                <div class="con1left-tab-head-div current" title="服饰">服饰</div>
+                                <div class="con1left-tab-head-div" title="美容">美容</div>
+                                <div class="con1left-tab-head-div" title="家居">家居</div>
+                                <div class="con1left-tab-head-div" title="星座">星座</div>
+                                <div class="con1left-tab-head-div" title="测试">测试</div>
+                            </div>
+                            <div class="con1left-tab-body">
+                                <div class="con1left-tab-body-div current">
+                                    <ul>
+                                        <li><span>01</span>&nbsp&nbsp&nbsp<span>新时代女星诱惑裙装集锦</span></li>
+                                        <li><span>02</span>&nbsp&nbsp&nbsp<span>范玮琪撞衫第一夫人彩条裙</span></li>
+                                        <li><span>03</span>&nbsp&nbsp&nbsp<span>何洁牵手释小龙甜美搭惹人爱</span></li>
+                                        <li><span>04</span>&nbsp&nbsp&nbsp<span>30款名媛轻熟搭打造气场衣橱</span></li>
+                                        <li><span>05</span>&nbsp&nbsp&nbsp<span>心计美人林心如穿衣经</span></li>
+                                        <li><span>06</span>&nbsp&nbsp&nbsp<span>牛仔加点儿“红”今季最流行</span></li>
+                                        <li><span>07</span>&nbsp&nbsp&nbsp<span>蕾丝镂空装!若隐若现最妩媚</span></li>
+                                        <li><span>08</span>&nbsp&nbsp&nbsp<span>17个简约chio装搭出清新格调</span></li>
+                                        <li><span>09</span>&nbsp&nbsp&nbsp<span>Dior新设计总监人选尘埃落定</span></li>
+                                        <li><span>10</span>&nbsp&nbsp&nbsp<span>亮色衣实搭攻略调动春夏热情</span></li>
+                                    </ul>
+                                </div>
+                                <div class="con1left-tab-body-div">
+                                    <ul>
+                                        <li><span>01</span>&nbsp&nbsp&nbsp<span>瑞丽网美容频道改版有奖调查</span></li>
+                                        <li><span>02</span>&nbsp&nbsp&nbsp<span>美白PK&nbsp&nbsp小S热辣呛腔林志玲</span></li>
+                                        <li><span>03</span>&nbsp&nbsp&nbsp<span>文青至爱&nbsp&nbsp小清新护肤品</span></li>
+                                        <li><span>04</span>&nbsp&nbsp&nbsp<span>香气性感带热榜让诱惑升级</span></li>
+                                        <li><span>05</span>&nbsp&nbsp&nbsp<span>探密性格找到专属香氛标签</span></li>
+                                        <li><span>06</span>&nbsp&nbsp&nbsp<span>明星最失败妆容&nbsp&nbsp惨不忍睹</span></li>
+                                        <li><span>07</span>&nbsp&nbsp&nbsp<span>学8款最夯剧集女主角发型</span></li>
+                                        <li><span>08</span>&nbsp&nbsp&nbsp<span>新生代美女杨幂时尚妆解构</span></li>
+                                        <li><span>09</span>&nbsp&nbsp&nbsp<span>《回家的诱惑》秋瓷炫发型</span></li>
+                                        <li><span>10</span>&nbsp&nbsp&nbsp<span>重口味美甲比拼视觉冲击力</span></li>
+                                    </ul>
+                                </div>
+                                <div class="con1left-tab-body-div">
+                                    <ul>
+                                        <li><span>01</span>&nbsp&nbsp&nbsp<span> Christof1e流线型家后示</span></li>
+                                        <li><span>02</span>&nbsp&nbsp&nbsp<span>自然元素壁纸会呼吸</span></li>
+                                        <li><span>03</span>&nbsp&nbsp&nbsp<span>单身的你最缺少什么?</span></li>
+                                        <li><span>04</span>&nbsp&nbsp&nbsp<span>初春家具糖果色来袭</span></li>
+                                        <li><span>05</span>&nbsp&nbsp&nbsp<span>条纹控!&nbsp&nbspDiy初春给力装饰</span></li>
+                                        <li><span>06</span>&nbsp&nbsp&nbsp<span>给力柔美风&nbsp&nbsp7款田园美餐厅</span></li>
+                                        <li><span>07</span>&nbsp&nbsp&nbsp<span>撞色空间越&nbsp&nbsp"色"越出位</span></li>
+                                        <li><span>08</span>&nbsp&nbsp&nbsp<span>"字母"大热百变饰家都精彩</span></li>
+                                        <li><span>09</span>&nbsp&nbsp&nbsp<span>早春选一款最"养眼"窗帘</span></li>
+                                        <li><span>10</span>&nbsp&nbsp&nbsp<span>威廉王子大婚甜蜜家饰走红</span></li>
+                                    </ul>
+                                </div>
+                                <div class="con1left-tab-body-div">
+                                    <ul>
+                                        <li><span>01</span>&nbsp&nbsp&nbsp<span>十二星座变脸排行榜</span></li>
+                                        <li><span>02</span>&nbsp&nbsp&nbsp<span>星男对女人的非分之想</span></li>
+                                        <li><span>03</span>&nbsp&nbsp&nbsp<span>星庄隐婚的目的</span></li>
+                                        <li><span>04</span>&nbsp&nbsp&nbsp<span>会回去找前女友暖昧的星男</span></li>
+                                        <li><span>05</span>&nbsp&nbsp&nbsp<span>侯佩岑婚期比大S的好吗?</span></li>
+                                        <li><span>06</span>&nbsp&nbsp&nbsp<span>12星座五月运势早知道</span></li>
+                                        <li><span>07</span>&nbsp&nbsp&nbsp<span>猫石对话周运(4.18-4.24)</span></li>
+                                        <li><span>08</span>&nbsp&nbsp&nbsp<span>琼女郎与黄志忠为何离婚?</span></li>
+                                        <li><span>09</span>&nbsp&nbsp&nbsp<span>谁是最值得嫁的星座好老公?</span></li>
+                                        <li><span>10</span>&nbsp&nbsp&nbsp<span>从梦境看内心最孤寂的八种人</span></li>
+                                    </ul>
+                                </div>
+                                <div class="con1left-tab-body-div">
+                                    <ul>
+                                        <li><span>01</span>&nbsp&nbsp&nbsp<span>未来一个月你的运势多少分?</span></li>
+                                        <li><span>02</span>&nbsp&nbsp&nbsp<span>素颜时你勾引功力有多强?</span></li>
+                                        <li><span>03</span>&nbsp&nbsp&nbsp<span>单身的你最缺少什么?</span></li>
+                                        <li><span>04</span>&nbsp&nbsp&nbsp<span>婚后的你是哪种主妇命?</span></li>
+                                        <li><span>05</span>&nbsp&nbsp&nbsp<span>婚后你的身价会跌多少?</span></li>
+                                        <li><span>06</span>&nbsp&nbsp&nbsp<span>你是他眼中的西施吗?</span></li>
+                                        <li><span>07</span>&nbsp&nbsp&nbsp<span>你有被暗恋的潜质吗?</span></li>
+                                        <li><span>08</span>&nbsp&nbsp&nbsp<span>这辈子你老公会偷吃几次?</span></li>
+                                        <li><span>09</span>&nbsp&nbsp&nbsp<span>你会放错电钓错鱼吗?</span></li>
+                                        <li><span>10</span>&nbsp&nbsp&nbsp<span>你“抢钱”能力有多强?</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                //获取标签栏的所有标签元素对象
+                                var tabs = document.getElementsByClassName('con1left-tab-head-div');
+                                //获取标签栏的所有内容对象
+                                var divs = document.getElementsByClassName('con1left-tab-body-div');
+                                var iidx=0;
+                                for(let i = 0;i<tabs.length;i++){
+                                    tabs[i].onmouseover = function(){
+                                        divs[iidx].classList.remove('current');
+                                        tabs[iidx].classList.remove('current');
+                                        iidx = i;
+                                        divs[iidx].classList.add('current');
+                                        tabs[iidx].classList.add('current');
+                                    };
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    <div id="con1center">
+                        <div id="con1centerhead">
+                            <div id="con1centerhead-time"></div>
+                            <script type="text/javascript">
+                                function showtime() {
+                                    var vWeek, vWeek_s, vDay;
+                                    vWeek = ["星期天", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+                                    var date =  new Date();
+                                    year = date.getFullYear();
+                                    month = date.getMonth() + 1;
+                                    day = date.getDate();
+                                    hours = date.getHours();
+                                    minutes = date.getMinutes();
+                                    seconds = date.getSeconds();
+                                    vWeek_s = date.getDay();
+                                    document.getElementById("con1centerhead-time").innerHTML = year + "年" + month + "月" + day + "日" + "\t" + hours + ":" + minutes + ":" + seconds + "\t" + vWeek[vWeek_s];
+                    
+                                };
+                                setInterval("showtime()", 1000);
+                            </script>
+                            <div class="con1centerhead-roll">
+                                <span style="float: left;;font-size: 14px;font-weight: bolder;text-align: left;line-height: 21px;">快讯：</span>
+                            <ul class="rolltextleft">
+                                <li>8个步骤调整代谢焕新源</li>
+                                <li>5个步骤胶原蛋白缓流失</li>
+                                <li>7个步骤养成良好作习惯</li>
+                                <li>3个步骤腰臀赘肉说拜拜</li>
+                            </ul>
+                        </div>
+                        <script>
+                            // 封装一个获取dom的函数
+                            function $(selector) {
+                                return document.querySelector(selector);
+                            }
+                            (function() {
+                                // 获取ul的dom
+                                var text_item = $('.rolltextleft');
+                                function newItem() {
+                                    // 获取第一个li
+                                    var newitem = text_item.children[0];
+                                    // 复制获取的第一个li
+                                    var newli = newitem.cloneNode(true);
+                                    // 添加进ul
+                                    text_item.appendChild(newli);
+                                }
+                                newItem();
+                    
+                                /**动画 */
+                                // 定义计时器的时间
+                                var text_interval = 2000;
+                                setInterval(moveNext, text_interval);
+                                // 每一个li的高度
+                                var itemHeight = 21;
+                                // 当前显示的li
+                                var currentli = 0;
+                                // 列表滚动到下一项
+                                function moveNext() {
+                                    // 第一次的高度
+                                    var form = itemHeight * currentli;
+                                    // li变为下一个
+                                    currentli++;
+                                    // li改变后的高度
+                                    var formli = itemHeight * currentli;
+                                    // 变化的总时间
+                                    var totalTime = 400;
+                                    // 变化一次的时间
+                                    var oneTime = 20;
+                                    // 变化的次数
+                                    var changeNumber = totalTime / oneTime;
+                                    // 变化高度
+                                    var changeAmount = (formli - form) / changeNumber;
+                                    // 计时器
+                                    var timerId = setInterval(function() {
+                                        form += changeAmount;
+                                        if (form >= formli) {
+                                            clearInterval(timerId);
+                                            if (currentli === text_item.children.length - 1) {
+                                                form = 0;
+                                                currentli = 0;
+                                            }
+                                        }
+                                        text_item.scrollTop = form;
+                                        }, oneTime)
+                                    }
+                                        })();
+                    
+                        </script>
+                        </div>
+                        <div id="con1center1">
+                            <h2><a href="#">美白双后PK 性感小S热辣呛腔林志玲</a></h2>
+                            <p><a href="#">一个是麻辣性感的“美白大帝”小S，一个是完美温柔的“美白女神”林志玲。当小S遇到林志玲，会碰撞出怎么样的火花......</a></p>
+                        </div>
+                        <div id="con1center2">
+                            <h2><a href="#">长谷川润靓装登台 点亮神户时尚盛宴</a></h2>
+                            <p><a href="#">2011神户时尚潮流盛宴如期而至，瑞丽专属模特与日本当红名模们靓装登台。长谷川润更是此次盛宴上最亮眼的T台风景......</a></p>
+                        </div>
+                        <div id="con1center3">
+                            <div id="con1center3left" class="con1center3text">
+                                <ul>
+                                    <li><a href="#">顶级花妆！日本美女超强示范</a></li>
+                                    <li><a href="#">谢霆锋刘嘉玲金像奖称帝封后</a></li>
+                                    <li><a href="#">魔力条纹 让春居更具活力</a></li>
+                                    <li><a href="#">杨幂蓝燕斜肩裙穿出女神感</a></li>
+                                    <li><a href="#">谁是最值得嫁的星座好老公？</a></li>
+                                    <li><a href="#">阳光下体验美白 享受美丽</a></li>
+                                </ul>
+                            </div>
+                            <div id="con1center3right" class="con1center3text">
+                                <ul>
+                                    <li><a href="#">美容新节奏 8招必学按摩法</a></li>
+                                    <li><a href="#">游巴厘岛 侯佩岑浪漫完婚地</a></li>
+                                    <li><a href="#">范范黑人预支蜜月浪漫美国行</a></li>
+                                    <li><a href="#">“愤怒的小鸟”主题婚礼</a></li>
+                                    <li><a href="#">精油唤醒身体肌肤活力</a></li>
+                                    <li><a href="#">小S林志玲美白防晒大PK</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="con1center4" class="con1center3text">
+                            <a href="#">&nbsp;&nbsp;寻找美白守护神赢正品 SKII点亮环彩之白&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;渴水秀发润泽凝驻</a><br> 
+                            <a href="#">&nbsp;&nbsp;净透肤渍 健康亮白&nbsp;&nbsp;悠莱彩妆，新耀登场&nbsp;&nbsp;铂金婚戒挑选红宝书</a>
+                        </div>
+                        <div id="con1center4ban"></div>
+                        <div id="con1center5"><hr color="red" size="1"></div>
+                        <div id="con1center6" class="con1center3text">
+                            <a href="#">如何找到适合自己的“精准”美白法呢？《追踪2011美白趋势“黄”皮肌精准“告白”》即将上线为你支招！</a><br> 
+                        </div>
+                        <div id="con1center7">
+                            <div id="con1center7left">
+                                <div id="con1center7leftpic"><a href="#"><img src="../img/row2pic1.jpg"></a></div> 
+                            </div>
+                            <div id="con1center7right">
+                                <div id="con1center7righttext0"><a href="#">&nbsp;&nbsp;&nbsp;名媛衣橱揭秘！偷学气场搭衣</a></div>
+                                <div id="con1center7righttext1"><a href="#">本期特别为你聚焦风格独具的神秘名媛悉数名门美女的穿衣道......</a></div>
+                                <div id="con1center7righttext2"><a href="#">&nbsp;&nbsp;精油唤醒身体肌肤活力</a></div>
+                                <div id="con1center7righttext2"><a href="#">&nbsp;&nbsp;破解收纳难题还你洁净空间</a></div>
+                                <div id="con1center7righttext2"><a href="#">&nbsp;&nbsp;威廉王子婚礼大猜想</a></div>
+                                <div id="con1center7righttext2"><a href="#">&nbsp;&nbsp;星座爱情诊所与小三斗争到底</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="con1right">
+                         <div id="con1righthead">
+                            <div id="con1righthead1"></div>
+                            <div id="con1righthead2">
+                                <input type="search" placeholder="瑞丽电子杂志">
+                                <button type="submit">提交</button>
+                            </div>
+                        </div>
+                        <div id="con1rightcenter">
+                            <div id="con1rightcenter1">
+                                <h4><a href="#">&nbsp;&nbsp;最新活动</a></h4>
+                            </div>
+                            <div id="con1rightcenter2"><a href="#"><img src="../img/row3pic1.jpg"></a></div>
+                            <div id="con1rightcenter3">
+                                <div class="con1center3text"><a href="#">&nbsp;&nbsp;&nbsp;秀出来资生堂美白女王就是你</a></div><br>
+                                <div class="con1center3text"><a href="#">&nbsp;&nbsp;许下美白心愿赢思魅欧珀莱正品</a></div>
+                                <div class="con1center3text"><a href="#">&nbsp;&nbsp;欧米茄Ladymatic女性腕表系列</a></div>
+                                <div class="con1center3text"><a href="#">&nbsp;&nbsp;爱慕最新礼服式泳衣周周送啦！</a></div>
+                            </div>
+                        </div>
+                        <div class="con1right-tab-box">
+                            <div class="con1right-tab-head">
+                                <div class="con1right-tab-head-div current" title="新刊早报">新刊早报</div>
+                                <div class="con1right-tab-head-div" title="市场调查">市场调查</div>
+                                <div class="con1right-tab-head-div" title="阳光基金">阳光基金</div>
+                            </div>
+                            <div class="con1right-tab-body">
+                                <div class="con1right-tab-body-div current">       
+                                        <img src="../img/row3pic2-1.jpg">
+                                        <span>《瑞丽时尚先锋》</span>
+                                        <p>《瑞丽时尚先锋》2月4号全国上市......</p>
+                                </div>   
+                                
+                                <div class="con1right-tab-body-div">
+                                        <img src="../img/row3pic2-2.jpg">
+                                        <span>4月号有奖调查</span>
+                                        <p>只要认真填写问卷，就有机会获得精美礼品......</p>
+                                </div>
+                                <div class="con1right-tab-body-div">
+                                        <img src="../img/row3pic2-3.jpg">
+                                        <span>瑞丽阳光基金</span>
+                                        <p>瑞丽阳光基金“对话希望”公益图片展举行......</p>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                //获取标签栏的所有标签元素对象
+                                var tabs2 = document.getElementsByClassName('con1right-tab-head-div');
+                                //获取标签栏的所有内容对象
+                                var divs2 = document.getElementsByClassName('con1right-tab-body-div');
+                                var iidx2=0;
+                                for(let j = 0;j<tabs2.length;j++){
+                                    tabs2[j].onmouseover = function(){
+                                        divs2[iidx2].classList.remove('current');
+                                        tabs2[iidx2].classList.remove('current');
+                                        iidx2 = j;
+                                        divs2[iidx2].classList.add('current');
+                                        tabs2[iidx2].classList.add('current');
+                                    };
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div id="transition"></div>
+                <div id="maincon2">
+                    <div id="con2head">
+                        <img src="../img/model.jpg" class="conhead">
+                        <ul>
+                            <li><a href="#">潮流播报</a></li>
+                            <li><a href="#">瑞丽培训</a></li>
+                            <li><a href="#">模特经纪</a></li>
+                            <li><a href="#">视频专区</a></li>
+                            <li><a href="#">赛事直击</a></li>
+                            <li><a href="#">我要做模特</a></li>
+                        </ul>
+                    </div> 
+                    <div id="con2main">
+                        <div id="con2mainleft">
+                            <div class="wrap2">
+                                <div id="con2rollpic">
+                                    <ul class="con2piclist">
+                                        <li class="item2 active"></li>
+                                        <li class="item2"></li>
+                                    </ul>
+                                </div>
+                                <div id="con2rollpoint">
+                                    <ul class="pointList2">
+                                        <li class="point2 active" data-index = 0>1</li>
+                                        <li class="point2" data-index = 1>2</li>
+                                    </ul>
+                                </div>
+                                <div id="con2rollcon">
+                                    <li class="text2 active" data-index = 0><div class="textin2">主题曲MV外景拍摄花絮</div></li>
+                                    <li class="text2" data-index = 1><div class="textin2">让肌肤焕彩透亮的秘诀</div></li>
+                                </div>
+                                <button class="btn2" id="leftBtn2"> < </button> 
+                                <button class="btn2" id="rightBtn2"> > </button>
+                            </div>
+                            <script>
+                                var texts2 = document.querySelectorAll(".text2");//文字
+                                var items2 = document.querySelectorAll(".item2");//图片
+                                var points2 = document.querySelectorAll(".point2")//点
+                                var left2 = document.getElementById("leftBtn2");
+                                var right2 = document.getElementById("rightBtn2");
+                                var all2 = document.querySelector(".wrap2")
+                                var index2 = 0;
+                                var time2 = 0;//定时器跳转参数初始化
+                                
+                         
+                                //清除active方法
+                                var clearActive2 = function () {
+                                    for (i = 0; i < items2.length; i++) {
+                                        items2[i].className = 'item2';
+                                    }
+                                    for (j = 0; j < points2.length; j++) {
+                                        points2[j].className = 'point2';
+                                    }
+                                    for (j = 0; j < points2.length; j++) {
+                                        texts2[j].className = 'text2';
+                                    }
+                                }
+                         
+                                //改变active方法
+                                var goIndex2 = function () {
+                                    clearActive2();
+                                    items2[index2].className = 'item2 active';
+                                    points2[index2].className = 'point2 active';
+                                    texts2[index2].className = 'text2 active';
+                                }
+                            
+                         //左按钮事件
+                                var goLeft2 = function () {
+                                    if (index2 == 0) {
+                                        index2 = 1;
+                                    } else {
+                                        index2--;
+                                    }
+                                    goIndex2();
+                                }
+                         
+                                //右按钮事件
+                                var goRight2 = function () {
+                                    if (index2 < 1) {
+                                        index2++;
+                                    } else {
+                                        index2 = 0;
+                                    }
+                                    goIndex2();
+                                }
+                        
+                                for(i = 0;i < points2.length;i++){
+                                    points2[i].addEventListener('click',function(){
+                                        var pointIndex2 = this.getAttribute('data-index')
+                                        index2 = pointIndex2;
+                                        goIndex2();
+                                        time2 = 0;//计时器跳转清零
+                                    })
+                                }
+                                //计时器
+                                var timer2;
+                                function play2(){
+                                 timer2 = setInterval(() => {
+                                    time2 ++;
+                                    if(time2 == 20 ){
+                                        goRight2();
+                                        time2 = 0;
+                                    }    
+                                },100)
+                            }
+                                play2();
+                                //移入清除计时器
+                                all2.onmousemove = function(){
+                                    clearInterval(timer2)
+                                }
+                               //移出启动计时器
+                                all2.onmouseleave = function(){
+                                    play2();
+                                }
+                            </script>
+                            
+                            <div id="con2mainleftfooter">
+                                <div id="con2lfleft">
+                                    <div id="con2mainleftfootertext">模特课堂</div>
+                                    <div id="con2mainleftfooterpic"><img src="../img/leftpic.jpg"></div>
+                                </div>
+                                <div id="con2lfright">
+                                    <div id="con2lfrighttext1">
+                                        <br><br>
+                                        <a href="#">5月18日平面模特班报名</a><br><br>
+                                        <a href="#">你是否对外形缺乏自信？是否也想打造瑞模般的妆容......</a><br>
+                                    </div>
+                                    <div id="con2lfrighttext2">
+                                        <br>
+                                        <a href="#">瑞丽培训舞动人生</a><br>
+                                        <a href="#">瑞丽培训为梦想插上翅膀</a><br>
+                                        <a href="#">5月18日平面模特班报名</a><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="con2mainright">
+                            <div id="con2mainrighthead">
+                                <div id="con2mainrighthead1"></div>
+                                <div id="con2mainrighthead2">
+                                    <div id="con2mainhead2left">
+                                        <h3 align="center">瑞丽封面模特大赛即将开赛！</h3>
+                                        <p>期盼已久的第9届封面模特大赛即将火热开赛！瑞丽专属模特为你传授比赛过程中的成功经验，赶快来看看吧......</p>
+                                    </div>
+                                    <div id="con2mainhead2right">
+                                        <img src="../img/201009141537551.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="con2mainrightcenter">
+                                <div id="con2maincenterleft">
+                                    <div id="con2maincenterleft1">
+                                        <div id="con2mainleftfootertext">模特出境</div>
+                                        <div id="con2maincenterleft1pic">
+                                            <img src="../img/rightpic1.jpg">
+                                        </div>
+                                    </div>
+                                    <div id="con2maincenterleft2">
+                                        <div id="con2maincentertext1">
+                                            <br><br>
+                                           <b><a href="#">瑞丽模特春夏潮搭秀</a></b><br><br>
+                                        </div>
+                                        <div id="con2maincentertext2">
+                                           <a href="#">AYUKI、康乐等瑞丽模特演绎春夏时尚造型......</a><br>
+                                        </div>
+                                        <div id="con2maincentertext3">
+                                           <a href="#">ayuki助时尚品牌新店剪彩</a><br>
+                                           <a href="#">张予曦演绎主题MV乖巧造型</a><br>
+                                           <a href="#">MV录影ayuki展现甜美舞风</a><br>
+                                    </div>
+                                    </div>
+                                </div>
+                            
+                                <div id="con2maincenterright">
+                                    <div id="con2maincenterright1">
+                                        <div id="con2mainleftfootertext">瑞丽之星</div>
+                                        <div id="con2maincenterright1pic">
+                                            <img src="../img/rightpic2.jpg">
+                                        </div>
+                                    </div>
+                                    <div id="con2maincenterright2">
+                                        <div id="con2maincentertext1">
+                                            <br><br>
+                                            <b><a href="#">4月预赛30强选手大公开</a></b><br><br>
+                                        </div>
+                                        <div id="con2maincentertext2">
+                                            <a href="#">4月预赛30强选手大公开，请为她们投票吧......</a><br>
+                                        </div>
+                                        <div id="con2maincentertext3">
+                                            <a href="#">蜜桃女孩儿玩转快乐时尚</a><br>
+                                            <a href="#">清新美女soski的美瞳秀</a><br>
+                                            <a href="#">麻豆小静最爱时尚潮搭</a><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="con2mainrightfooter">
+                                    <div id="con2mainrightfooterleft">
+                                       <div id="con2mainrightfooterhr"></div>
+                                       <div id="con2mainrightfooterhead">
+                                          <div id="con2mainrightfooterhead1">T台秀场</div>
+                                          <div id="con2mainrightfooterhead2">作为现代中国时尚之全球大使，上海滩以一场星光熠熠的时装秀铭刻其崭新系列的发布......</div>
+                                        </div>
+                                       <div id="con2mainrightfooterfooter">
+                                        <marquee loop=-1 behavior="alternate" onmouseover=stop() onmouseout=start() direction="left" width="" height="">
+                                            <ul>
+                                                <li><div class="con2mainfooterpic"><a href="#" title="上海滩<灿变>春夏大秀"><img src="../img/T2.jpg"></a></div></li>
+                                                <li><div class="con2mainfooterpic"><a href="#" title="上海滩<灿变>春夏大秀"><img src="../img/T3.jpg"></a></div></li>
+                                                <li><div class="con2mainfooterpic"><a href="#" title="上海滩<灿变>春夏大秀"><img src="../img/T4.jpg"></a></div></li>
+                                                <li><div class="con2mainfooterpic"><a href="#" title="上海滩<灿变>春夏大秀"><img src="../img/T5.jpg"></a></div></li>
+                                                <li><div class="con2mainfooterpic"><a href="#" title="上海滩<灿变>春夏大秀"><img src="../img/T6.jpg"></a></div></li>
+                                                <li><div class="con2mainfooterpic"><a href="#" title="上海滩<灿变>春夏大秀"><img src="../img/T7.jpg"></a></div></li>
+                                                <li><div class="con2mainfooterpic"><a href="#" title="上海滩<灿变>春夏大秀"><img src="../img/T8.jpg"></a></div></li>
+                                                <li><div class="con2mainfooterpic"><a href="#" title="上海滩<灿变>春夏大秀"><img src="../img/T9.jpg"></a></div></li>
+                                                <li><div class="con2mainfooterpic"><a href="#" title="上海滩<灿变>春夏大秀"><img src="../img/T10.jpg"></a></div></li>
+                                                <li><div class="con2mainfooterpic"><a href="#" title="上海滩<灿变>春夏大秀"><img src="../img/T11.jpg"></a></div></li>
+                                                <li><div class="con2mainfooterpic"><a href="#" title="上海滩<灿变>春夏大秀"><img src="../img/T12.jpg"></a></div></li>
+                                            </ul>
+                                        </marquee>
+                                    </div>
+                                </div>
+                                   <div id="con2mainrightfooterright"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="maincon3">
+                    <div id="con3head">
+                        <img src="../img/magazine.jpg" class="conhead">
+                        <ul>
+                            <li><a href="#">《瑞丽服饰美容》</a></li>
+                            <li><a href="#">《瑞丽伊人风尚》</a></li>
+                            <li><a href="#">《瑞丽时尚先锋》</a></li>
+                            <li><a href="#">《瑞丽家居设计》</a></li>
+                            <li><a href="#">《瑞丽风尚》</a></li>
+                        </ul>
+                    </div>
+                    <div id="con3main">
+                        <div id="con3maincon">
+                            <ul>
+                                <li>
+                                    <div class="con3mainpic"><a href="#"><img src="../img/pic1.jpg"></a></div>
+                                    <div class="con3footertext"><b><p>每月25号上市</p></b></div>
+                                </li>
+                                <li>
+                                    <div class="con3mainpic"><a href="#"><img src="../img/pic2.jpg"></a></div>
+                                    <div class="con3footertext"><b><p>每月25号上市</p></b></div>
+                                </li>
+                                <li>
+                                    <div class="con3mainpic"><a href="#"><img src="../img/pic3.jpg"></a></div>
+                                    <div class="con3footertext"><b><p>每月16号上市</p></b></div>
+                                </li>
+                                <li>
+                                    <div class="con3mainpic"><a href="#"><img src="../img/pic4.jpg"></a></div>
+                                    <div class="con3footertext"><b><p>每月16号上市</p></b></div>
+                                </li>
+                                <li>
+                                    <div class="con3mainpic"><a href="#"><img src="../img/pic5.jpg"></a></div>
+                                    <div class="con3footertext"><b><p>每月28号上市</p></b></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+            <div id="footer">
+              <div id="footer3"> </div>
+              <div id="footer1">
+                <table width="960px" height="190px" bordercolor="#242424" border="1px" rules="cols">
+                <tr id="bt">
+                    <th>服 饰</th>
+                    <th>美 容</th>
+                    <th>家 居</th>
+                    <th>模 特</th>
+                    <th>格 调</th>
+                    <th>美体</th>
+                    <th>健 康</th>
+                    <th>星 座</th>
+                    <th>情 感</th>
+                </tr>
+                <tr>
+                    <td><a href="#">搭配课堂</a></td>
+                    <td><a href="#">护肤锦囊</a></td>
+                    <td><a href="#">家居设计</a></td>
+                    <td><a href="#">瑞模出镜</a></td>
+                    <td><a href="#">城事</a></td>
+                    <td><a href="#">减肥瘦身</a></td>
+                    <td><a href="#">美丽人生</a></td>
+                    <td><a href="#">星美人时尚</a></td>
+                    <td><a href="#">纯真年代</a></td>
+                 </tr>
+                 <tr>
+                    <td><a href="#">潮流单品</a></td>
+                    <td><a href="#">魅力彩妆</a></td>
+                    <td><a href="#">家饰生活</a></td>
+                    <td><a href="#">国际名模</a></td>
+                    <td><a href="#">悦读</a></td>
+                    <td><a href="#">优雅曲线</a></td>
+                    <td><a href="#">关爱女性</a></td>
+                    <td><a href="#">性格小测算</a></td>
+                    <td><a href="#">倾城之恋</a></td>
+                 </tr>
+                 <tr>
+                    <td><a href="#">模特榜样</a></td>
+                    <td><a href="#">靓发攻略</a></td>
+                    <td><a href="#">装修手册</a></td>
+                    <td><a href="#">风尚男模</a></td>
+                    <td><a href="#">运动</a></td>
+                    <td><a href="#">享瘦美食</a></td>
+                    <td><a href="#">心灵鸡汤</a></td>
+                    <td><a href="#">星梦奇缘</a></td>
+                    <td><a href="#">时尚风向</a></td>
+                 </tr>
+                 <tr>
+                    <td><a href="#">明星风尚</a></td>
+                    <td><a href="#">香氛物语</a></td>
+                    <td><a href="#">乐居方式</a></td>
+                    <td><a href="#">魅力女模</a></td>
+                    <td><a href="#">优雅课堂</a></td>
+                    <td><a href="#">健身时间</a></td>
+                    <td><a href="#">吃出健康</a></td>
+                    <td><a href="#">魔法开运</a></td>
+                    <td><a href="#">恋爱宝典</a></td>
+                 </tr>
+                 <tr>
+                    <td><a href="#">高街流行</a></td>
+                    <td><a href="#">美体蜜语</a></td>
+                    <td><a href="#">建财宝典</a></td>
+                    <td><a href="#">T台秀场</a></td>
+                    <td><a href="#">恋物</a></td>
+                    <td><a href="#">塑身有道</a></td>
+                    <td><a href="#">我爱的他</a></td>
+                    <td><a href="#">明星密码</a></td>
+                    <td><a href="#">婚姻物语</a></td>
+                 </tr>
+                 <tr>
+                    <td><a href="#">时尚咨询</a></td>
+                    <td><a href="#">明显扮靓</a></td>
+                    <td><a href="#">设计师在线</a></td>
+                    <td><a href="#">瑞丽之星</a></td>
+                    <td><a href="#">爱车</a></td>
+                    <td><a href="#">明星榜样</a></td>
+                    <td><a href="#">健康地带</a></td>
+                    <td><a href="#">粉面桃花</a></td>
+                    <td><a href="#">office恋情</a></td>
+                 </tr>
+            </table>
+              </div>
+              <div id="footer2" >
+                <span><a href="#" >广告服务</a>&nbsp;|&nbsp;<a href="#" link=>联系我们</a>&nbsp;|&nbsp;<a href="#">法律声明</a>&nbsp;|&nbsp;<a href="#">瑞丽招聘</a>
+                    &nbsp;|&nbsp;<a href="#">关于瑞丽</a>&nbsp;|&nbsp;<a href="#">网站地图</a>&nbsp;|&nbsp;<a href="#">RSS</a>&nbsp;|&nbsp;<a href="#">设为首页</a></span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<from>
+                        <select >
+                            <option value="" selected>--合作伙伴--</option>
+                            <option value="">福建师范大学</option>   
+                        </select>
+                    </from>
+                    <br>
+                    <br><span><u><a href="#" >京ICP证010512号</a></u>&nbsp;©2001-2011&nbsp;Rayli.com&nbsp;All Right Reserved&nbsp;电信业务审批【2001】字第651号</span><br>
+                <span>版权所有&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp不得转载</span>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>
